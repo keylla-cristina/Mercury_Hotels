@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    width: 12px;         
+}
+  
+body::-webkit-scrollbar-track{
+    background: #2A8487; 
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #6ecfd2;    
+    border-radius: 20px;       
+    border: 3px solid #2A8487; 
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2A8487;
+    padding: 3px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #d3bd16;
+}
+
+.navbar a:hover{
+    transition: 0.5s;
+    color: #b1edef;
+    font-size: 20px;
+}
+
+.logo{
+    margin-right: 50px;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-family:  'Ysabeau SC', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+#toggler, .navbar label{
+    display: none;
+}
+
+i{
+    color: #d3bd16;
+    font-size: 25px;
+}
+
+.slide{
+    width: 100%;
+    height: 31.30em;
+    background-position: center;
+    background-size: cover;
+    animation: banner 10s linear infinite 0s;
+    animation-timing-function: ease-out;
+    background-image: url(img/banner3.jpg);
+}
+
+@keyframes banner{
+    0%{
+        background-image: url(img/banner3.jpg);
+    }
+
+    25%{
+        background-image: url(img/banner2.jpg);
+    }
+
+    50%{
+        background-image: url(img/banner3.jpg);
+    }
+
+    75%{
+        background-image: url(img/banner2.jpg);
+    }
+
+    100%{
+        background-image: url(img/banner3.jpg);
+    }
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    margin-top: -22em;
+    padding-bottom: 3.9em;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 8em;
+    background-color: #daecfb;
+    padding-top: 6em;
+}
+
+h1{
+    font-family:  'Ysabeau SC', sans-serif;
+    color: #d3bd16;
+    font-size: 4em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+p{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.text{
+    max-width: 45em;
+}
+
+main img{
+    width: 45%;
+}
+
+.gallery{
+    padding-bottom: 5em;
+    background-color: #daecfb;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding: 0 1vw;
+}
+
+.card{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    outline: 2px solid #d3bd16;
+    outline-offset: -10px;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 20px 60px;
+}
+
+.card img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .25s;
+    z-index: -1;
+}
+
+.card:hover img{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.serv{
+    background-color: #daecfb;
+}
+
+.serviços{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5em;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding: 0 1vw;
+}
+
+.images{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.images img{
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: 1s;
+}
+
+.images img:nth-child(2){
+    transform: rotateY(180deg);
+}
+
+.images:hover img:nth-child(2) {
+    transform: rotateY(0);
+}
+
+.images:hover img:nth-child(1){
+    transform: rotateY(-180deg);
+}
+
+.contato{
+    background-color: #daecfb;
+}
+
+.ctt{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding: 0 1vw;
+    padding-bottom: 5em;
+    overflow: hidden;
+}
+
+.local{
+    text-align: center;
+}
+
+h2{
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 30px;
+    color: #d9ca44;
+}
+
+iframe{
+    margin-top: 3em;
+}
+
+iframe:hover{
+    scale: 1.1;
+    transition: 1s;
+}
+
+.sac{
+    width: 35em;
+    text-align: center;
+}
+
+form{
+    color: #baa718;
+    font-size: 20px;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 600;
+}
+
+input, textarea{
+    padding: 1em;
+    width: 30em;
+    background-color: #daecfb;
+    border: 2px solid #d9ca44;
+    color: #a08f10;
+    border-radius: 12px;
+}
+
+#buttom{
+    width: 21.5em;
+    padding: 0.5em;
+    margin-top: 2px;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #dbcb3d;
+}
+
+#buttom:hover{
+    background-color: #dbcb3d;
+    color: #daecfb;
+    cursor: pointer;
+    transition: 1s;
+}
+
+footer{
+    background: linear-gradient(to top,#2A8487,#6ecfd2, #b1edef,#daecfb);
+    height: 35em;
+}
+
+.redes{
+    margin-left: -10em;
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    rotate: 90deg;
+    justify-content: center;
+    background: #daecfb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    height: 50px;
+    width: 420px;
+}
+  
+.conteudo::before,
+.conteudo::after{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    transition: 0.25s linear;
+    z-index: 1;
+}
+  
+.conteudo::before{
+    content: "";
+    left: 0;
+    justify-content: flex-end;
+    background-color: #2A8487;
+}
+  
+.conteudo::after{
+    content: "";
+    right: 0;
+    justify-content: flex-start;
+    background-color: #2A8487;
+}
+  
+.conteudo:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+  
+.conteudo:hover span{
+    opacity: 0;
+    z-index: -3;
+}
+  
+.conteudo:hover::before{
+    opacity: 0.5;
+    transform: translateY(-100%);
+}
+  
+  .conteudo:hover::after{
+    opacity: 0.5;
+    transform: translateY(100%);
+}
+  
+.conteudo span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #d9ca44;
+    font-family: "Fira Mono", monospace;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    word-wrap: break-word;
+    rotate: -90deg;
+}
+  
+.conteudo .links__gerais{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+  
+.conteudo .links__gerais img{
+    text-shadow: 1px 1px rgba(31, 74, 121, 0.7);
+    transform: scale(1);
+    width: 30px;
+    height: 30px;
+    rotate: -90deg;
+}
+  
+.conteudo .links__gerais:hover{
+    background-color: rgba(249, 244, 255, 0.774);
+    animation: animacaoPulante 0.4s linear;
+}
+  
+@keyframes animacaoPulante{
+    40%{
+      transform: scale(1.4);
+    }
+  
+    60%{
+      transform: scale(0.8);
+    }
+  
+    80%{
+      transform: scale(1.2);
+    }
+  
+    100%{
+      transform: scale(1);
+    }
+}
+
+.return{
+    margin-top: 14em;
+    margin-right: 1.5em;
+}
+
+.return img{
+    transform: translate(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.rodape{
+    text-align: center;
+    color: #736a26;
+    margin-top: -5em;
+}
+
+@media screen and (max-width: 600px){
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .list{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked ~ .menu{
+        max-height: 100%;
+    }
+
+    .text{
+        margin-bottom: 15px;
+    }
+
+    main{
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+
+    main img{
+        width: 100%;
+    }
+
+    .serviços{
+        padding-right: 30%;
+        padding-left: 27%;
+    }
+
+    iframe{
+        width: 350px;
+        height: 350px;
+    }
+
+    .card{
+        width: 200px;
+        height: 200px;        
+    }
+
+    .images img{
+        height: 180px;
+    }
+
+    .ctt{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sac{
+        margin-top: 15px;
+        width: 350px;
+        margin-left: -5%;
+    }
+
+    input, textarea{
+        width: 300px; 
+    }
+
+    #buttom{
+        width: 300px;
+    }
+
+    .return img{
+        width: 60px;
+        height: 60px;
+    }
+
+    footer{
+        height: 37em;
+    }
+
+}
+
+@media screen and (max-width: 920px){
+    main{
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+
+    main img{
+        width: 100%;
+    }
+
+    .text{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width:1739px){
+    .row1{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2vw;
+        padding: 0 10vw;
+    }
+}
